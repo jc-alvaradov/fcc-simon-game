@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+	<div id="simon">
+		<div class="row">
+			<div id="green" class="board-btn" onclick="colorClick(this.id)"></div>
+			<div id="red" class="board-btn" onclick="colorClick(this.id)"></div>
+		</div>
+		<div class="row">
+			<div id="yellow" class="board-btn" onclick="colorClick(this.id)"></div>
+			<div id="blue" class="board-btn" onclick="colorClick(this.id)"></div>
+		</div>
+	</div>
+	<div id="panel">
+		<h1>SIMON</h1>
+		<button>Start</button>
+		<button>Strict</button><br>
+		<button>On/Off</button>
+	</div>
+	<div id="horizontal-line"></div>
+	<div id="vertical-line"></div>
+	<div id="shadowBox"></div>
+  <script src="js/script.js"></script>
+</body>
+</html>
