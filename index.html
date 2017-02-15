@@ -5,8 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="css/style.css">
 </head>
-
+	
 <body>
+	<h1>Simon® Game</h1>
 	<div id="simon">
 		<div class="row">
 			<div id="green" class="board-btn" onclick="colorClick(this.id)"></div>
@@ -18,14 +19,18 @@
 		</div>
 	</div>
 	<div id="panel">
-		<h1>SIMON</h1>
-		<button>Start</button>
-		<button>Strict</button><br>
-		<button>On/Off</button>
+		<div id="message">
+			<span id="message-text"></span>
+		</div>
+		<div id="steps">
+			<span id="steps-text"></span>
+		</div>
+		<div class="menuBtn" onclick="activateStrictMode()">Strict Mode</div><br>
+		<div class="menuBtn" onclick="restart()">Restart</div>
 	</div>
 	<div id="horizontal-line"></div>
 	<div id="vertical-line"></div>
-	<div id="shadowBox"></div>
-  <script src="js/script.js"></script>
+	<div id="input-blocker"></div>
+	<p id="warning">Warning: A loud noise is heard when the user reaches 20 steps</p>
 </body>
 </html>
