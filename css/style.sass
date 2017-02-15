@@ -1,3 +1,41 @@
+$text-color: white
+$font: 'consolas', 'sans-serif'
+
+@media only screen and (max-width: 400px) 
+	#simon
+		width: 300px !important
+		height: 300px !important
+
+	#panel
+		width: 150px !important
+		height: 150px !important
+
+	#horizontal-line
+		width: 300px !important
+		height: 10px !important
+
+	#vertical-line
+		width: 10px !important
+		height: 300px !important
+
+	#message
+		width: 100px !important
+		margin-top: 20px !important
+		margin-bottom: 1px !important
+		padding-top: 5px !important
+
+	#steps
+		width: 70px !important
+		margin-top: 5px !important
+		margin-bottom: 5px !important
+		padding-top: 5px !important
+
+@media only screen and (max-width: 1400px) 
+	#simon
+		top: 25% !important
+	#panel
+		top: 25% !important
+
 #simon
 	position: absolute
 	display: table
@@ -11,7 +49,7 @@
 	border: 15px solid #212121
 	border-radius: 50%
 	overflow: hidden
-	z-index: 1
+	z-index: 2
 	
 #panel
 	position: absolute
@@ -26,8 +64,33 @@
 	right: 0
 	top: 0
 	bottom: 0
-	z-index: 2
+	z-index: 3
 
+#message
+	position: relative
+	color: white
+	text-align: center
+	font-family: $font
+	width: 140px
+	height: 30px
+	margin: 0 auto
+	margin-top: 50px
+	margin-bottom: 10px
+	padding-top: 10px
+	background-color: black
+	border-radius: 8px
+
+#steps
+	@extend #message
+	width: 80px
+	height: 30px
+	padding-top: 5px
+	margin-top: 0
+
+#steps-text
+	color: $text-color
+	font-size: 15px
+	
 .row
 	display: table-row
 
@@ -37,6 +100,24 @@
 	cursor: pointer
 	width: 50px
 	height: 50px
+	z-index: 1
+
+.board-btn:active
+	opacity: 0.7
+
+.menuBtn
+	display: inline-block
+	border: 1px solid black
+	border-radius: 4px
+	font-family: $font
+	font-size: 14px
+	margin: 2px
+	background-color: white
+	color: black
+	min-width: 60px
+	max-width: 100px
+	cursor: pointer
+	z-index: 5
 
 #green
 	background-color: #4CAF50
@@ -50,6 +131,9 @@
 #blue
 	background-color: #2196F3
 
+.selected
+	opacity: 0.7
+
 #horizontal-line
 	@extend #panel
 	background-color: #424242
@@ -57,9 +141,31 @@
 	border-radius: 0
 	width: 400px
 	height: 15px
-	z-index: 1
+	z-index: 2
 
 #vertical-line
 	@extend #horizontal-line
 	width: 15px
 	height: 400px
+
+#input-blocker
+	position: absolute
+	display: none
+	width: 100%
+	height: 100%
+	top: 0
+	left: 0
+	opacity: 0
+	z-index: 4
+
+h1
+	font-family: $font
+	font-size: 50px
+	text-align: center
+
+#warning
+	position: relative
+	font-family: $font
+	text-align: center
+	color: black
+	opacity: 0.7
